@@ -18,7 +18,7 @@ Software design is a very hard thing. From years, a trend has appeared to put th
 
 One of the first and main ones was introduced by E. Evans in its [Domain Driven Design approach](http://dddsample.sourceforge.net/architecture.html).
 
-![DDD Architecture](/doc/DDD_architecture.jpg)
+![DDD Architecture](/./src/doc/DDD_architecture.jpg)
 
 Based on it or in the same time, other applicative architectures appeared like [Onion Architecture](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/) (by. J. Palermo), [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) (by A. Cockburn) or [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (by. R. Martin).
 
@@ -30,7 +30,7 @@ The application follows the Uncle Bob "[Clean Architecture](https://8thlight.com
 
 ### Clean Architecture layers
 
-![Schema of flow of Clean Architecture](/doc/Uncle_Bob_Clean_Architecture.jpg)
+![Schema of flow of Clean Architecture](/./src/doc/Uncle_Bob_Clean_Architecture.jpg)
 
 ### Project anatomy
 
@@ -63,7 +63,7 @@ app
 
 ### Flow of Control
 
-![Schema of flow of Control](/doc/Hapijs_Clean_Architecture.svg)
+![Schema of flow of Control](/./src/doc/Hapijs_Clean_Architecture.svg)
 
 ### The Dependency Rule
 
