@@ -1,35 +1,53 @@
 {
-  "name": "clean-architecture-node",
+  "name": "nodejs-clean-architecture-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple API built with Node.js/Hapi.js that follows DDD + Clean Architecture principles",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "dev": "nodemon",
     "start": "node index.js",
     "test": "NODE_ENV=test jest",
-    "start:local": "ts-node-dev --transpile-only 'src/index.ts' | pino-pretty -c",
-    "lint": "eslint ./src ./test --ext .ts",
-    "lint:fix": "eslint ./src ./test --ext .ts --fix",
-    "test:functional": "jest --projects ./test --forceExit --runInBand",
-    "test:unit": "jest",
-    "style:check": "prettier --check 'src/**/*.ts' 'test/**/*.ts'",
-    "style:fix": "prettier --write 'src/**/*.ts' 'test/**/*.ts'"
+    "coverage": "jest --coverage"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.50.0",
-    "@typescript-eslint/parser": "^5.50.0",
-    "eslint": "^8.33.0",
-    "prettier": "2.8.3",
-    "typescript": "^4.9.5"
+  "author": "Jérémy Buget",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbuget/nodejs-clean-architecture-app.git"
   },
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "hapi-swagger": "^15.0.0",
-    "mongoose": "^6.9.0",
+    "@hapi/boom": "^9.1.0",
+    "@hapi/good": "^9.0.0",
+    "@hapi/good-console": "^9.0.0",
+    "@hapi/good-squeeze": "^6.0.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/vision": "^6.0.0",
+    "blipp": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "hapi-swagger": "^13.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.16",
     "request": "^2.88.2",
-    "sequelize": "^6.28.0"
+    "require-directory": "^2.1.1",
+    "sequelize": "^5.21.11"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "sqlite3": "^4.2.0"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6.12"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/coverage/**"
+    ],
+    "testURL": "http://localhost/"
   }
 }
