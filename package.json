@@ -24,5 +24,12 @@
     "eslint": "^8.33.0",
     "prettier": "2.8.3",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "hapi-swagger": "^15.0.0",
+    "mongoose": "^6.9.0",
+    "request": "^2.88.2",
+    "sequelize": "^6.28.0"
   }
 }
